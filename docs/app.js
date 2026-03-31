@@ -210,9 +210,13 @@ async function init() {
     setupFilters();
     renderTable();
   } catch (err) {
+    const isFileProtocol = window.location.protocol === 'file:';
+    const message = isFileProtocol
+      ? 'Cannot load data from file:// protocol. Run <code>npm run dev</code> and open <code>http://localhost:3000</code>'
+      : 'Failed to load data. Please try again later.';
     document.getElementById('api-tbody').innerHTML =
       `<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--text-muted)">
-        Failed to load data. Please try again later.
+        ${message}
       </td></tr>`;
   }
 }

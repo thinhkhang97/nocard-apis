@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node scripts/build-catalog.js",
     "validate": "node scripts/validate-schema.js",
-    "health-check": "node scripts/health-check.js"
+    "health-check": "node scripts/health-check.js",
+    "dev": "npx serve docs -l 3000"
   },
   "keywords": [
     "free-apis",
