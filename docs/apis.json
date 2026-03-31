@@ -19,5 +19,22 @@
       "travel"
     ],
     "added": "2026-03-31"
+  },
+  {
+    "id": "weather/openweathermap",
+    "category": "weather",
+    "name": "OpenWeatherMap",
+    "url": "https://openweathermap.org/api",
+    "api_base": "https://api.openweathermap.org/data/2.5/weather",
+    "description": "Current weather and 5-day/3-hour forecasts for any location; free tier with 60 calls/min, email signup only",
+    "auth": "apiKey",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "weather",
+      "forecast",
+      "maps"
+    ],
+    "added": "2026-03-31"
   }
 ]

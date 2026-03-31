@@ -12,9 +12,13 @@ const BATCH_SIZE = 10;
 const BATCH_DELAY_MS = 500;
 const USER_AGENT = 'nocard-apis-health-check/1.0';
 
-function classify(statusCode, responseTimeMs) {
+function classify(statusCode, responseTimeMs, auth) {
   if (statusCode === 429) return 'rate-limited';
   if (statusCode >= 200 && statusCode < 400) {
+    return responseTimeMs > 5000 ? 'degraded' : 'up';
+  }
+  // APIs requiring a key return 401/403 when pinged without one — that's still "up"
+  if ((statusCode === 401 || statusCode === 403) && auth !== 'none') {
     return responseTimeMs > 5000 ? 'degraded' : 'up';
   }
   return 'down';
@@ -40,7 +44,7 @@ async function checkApi(api) {
     const responseTimeMs = Math.round(performance.now() - start);
 
     return {
-      status: classify(response.status, responseTimeMs),
+      status: classify(response.status, responseTimeMs, api.auth),
       status_code: response.status,
       response_time_ms: responseTimeMs,
       checked_at: new Date().toISOString(),
