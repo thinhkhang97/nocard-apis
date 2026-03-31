@@ -1,8 +1,15 @@
 {
-  "last_run": null,
-  "total": 0,
-  "up": 0,
+  "last_run": "2026-03-31T15:32:45.082Z",
+  "total": 1,
+  "up": 1,
   "degraded": 0,
   "down": 0,
-  "results": {}
+  "results": {
+    "dev-tools/serpapi": {
+      "status": "up",
+      "status_code": 200,
+      "response_time_ms": 402,
+      "checked_at": "2026-03-31T15:32:45.081Z"
+    }
+  }
 }
