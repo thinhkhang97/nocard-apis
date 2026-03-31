@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nocard-apis - Free APIs, No Credit Card Required</title>
+  <meta name="description" content="Curated catalog of free APIs that don't require a credit card, with automated health monitoring.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>nocard-apis</h1>
+      <p class="tagline">Free APIs. No credit card. Health monitored.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="summary" class="summary" aria-label="Health summary">
+      <div class="stat-card stat-total">
+        <span class="stat-value" id="total-count">-</span>
+        <span class="stat-label">Total APIs</span>
+      </div>
+      <div class="stat-card stat-up">
+        <span class="stat-value" id="up-count">-</span>
+        <span class="stat-label">Up</span>
+      </div>
+      <div class="stat-card stat-degraded">
+        <span class="stat-value" id="degraded-count">-</span>
+        <span class="stat-label">Degraded</span>
+      </div>
+      <div class="stat-card stat-down">
+        <span class="stat-value" id="down-count">-</span>
+        <span class="stat-label">Down</span>
+      </div>
+      <div class="stat-card stat-uptime">
+        <span class="stat-value" id="uptime-pct">-</span>
+        <span class="stat-label">Uptime</span>
+      </div>
+    </section>
+
+    <section class="controls">
+      <input
+        type="search"
+        id="search"
+        placeholder="Search APIs..."
+        aria-label="Search APIs"
+      >
+      <select id="category-filter" aria-label="Filter by category">
+        <option value="">All Categories</option>
+      </select>
+      <select id="status-filter" aria-label="Filter by status">
+        <option value="">All Statuses</option>
+        <option value="up">Up</option>
+        <option value="degraded">Degraded</option>
+        <option value="down">Down</option>
+        <option value="rate-limited">Rate Limited</option>
+      </select>
+      <select id="auth-filter" aria-label="Filter by auth">
+        <option value="">All Auth Types</option>
+        <option value="none">No Auth</option>
+        <option value="apiKey">API Key</option>
+        <option value="oauth">OAuth</option>
+      </select>
+    </section>
+
+    <p id="last-check" class="last-check"></p>
+
+    <section id="api-table-wrapper" aria-label="API catalog">
+      <table id="api-table">
+        <thead>
+          <tr>
+            <th class="sortable" data-sort="status">Status</th>
+            <th class="sortable" data-sort="name">Name</th>
+            <th class="th-desc">Description</th>
+            <th class="sortable" data-sort="category">Category</th>
+            <th class="sortable" data-sort="auth">Auth</th>
+            <th class="sortable" data-sort="response_time">Response</th>
+          </tr>
+        </thead>
+        <tbody id="api-tbody"></tbody>
+      </table>
+      <p id="no-results" class="no-results" hidden>No APIs match your filters.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="https://github.com/thinhkhang97/nocard-apis" target="_blank" rel="noopener">GitHub</a>
+        &middot; Health checks run every 6 hours
+        &middot; <a href="https://github.com/thinhkhang97/nocard-apis/issues/new?template=submit-api.yml" target="_blank" rel="noopener">Submit an API</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
