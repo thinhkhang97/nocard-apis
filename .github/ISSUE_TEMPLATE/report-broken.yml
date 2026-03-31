@@ -1,0 +1,34 @@
+name: Report Broken API
+description: Report an API that is no longer working or now requires a credit card
+title: "[Broken] "
+labels: ["broken-api"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: API Name
+      placeholder: Name as listed in the catalog
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: What's wrong?
+      options:
+        - API is down / not responding
+        - API now requires a credit card
+        - API has been discontinued
+        - API changed its URL
+        - Rate limits are too restrictive to be useful
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Any additional context about the issue
+    validations:
+      required: false

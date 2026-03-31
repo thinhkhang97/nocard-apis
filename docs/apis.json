@@ -1,0 +1,619 @@
+[
+  {
+    "id": "animals/cat-facts",
+    "category": "animals",
+    "name": "Cat Facts",
+    "url": "https://catfact.ninja/",
+    "api_base": "https://catfact.ninja/fact",
+    "description": "Random cat facts and breed listings",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "animals",
+      "cats",
+      "facts"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "animals/dog-ceo",
+    "category": "animals",
+    "name": "Dog CEO",
+    "url": "https://dog.ceo/dog-api/documentation/",
+    "api_base": "https://dog.ceo/api/breeds/image/random",
+    "description": "Random dog images and breed data from 20,000+ images across 120+ breeds",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "animals",
+      "dogs",
+      "images"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "animals/http-cat",
+    "category": "animals",
+    "name": "HTTP Cat",
+    "url": "https://http.cat/",
+    "api_base": "https://http.cat/200",
+    "description": "Cat images for every HTTP status code",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "animals",
+      "cats",
+      "images",
+      "http"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "animals/randomfox",
+    "category": "animals",
+    "name": "RandomFox",
+    "url": "https://randomfox.ca/",
+    "api_base": "https://randomfox.ca/floof/",
+    "description": "Random fox images",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "animals",
+      "foxes",
+      "images"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "animals/shibe-online",
+    "category": "animals",
+    "name": "Shibe.Online",
+    "url": "https://shibe.online/",
+    "api_base": "https://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true",
+    "description": "Random Shiba Inu, cat, and bird images",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "animals",
+      "dogs",
+      "images"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "animals/the-cat-api",
+    "category": "animals",
+    "name": "The Cat API",
+    "url": "https://developers.thecatapi.com/",
+    "api_base": "https://api.thecatapi.com/v1/images/search",
+    "description": "60K+ cat images with breed info; free API key via email signup",
+    "auth": "apiKey",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "animals",
+      "cats",
+      "images"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "dev-tools/dummyjson",
+    "category": "dev-tools",
+    "name": "DummyJSON",
+    "url": "https://dummyjson.com/docs",
+    "api_base": "https://dummyjson.com/products/1",
+    "description": "Rich fake REST API with 150+ endpoints for products, users, carts, recipes, and more",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "dev-tools",
+      "testing",
+      "placeholder",
+      "json"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "dev-tools/httpbin",
+    "category": "dev-tools",
+    "name": "httpbin",
+    "url": "https://httpbin.org/",
+    "api_base": "https://httpbin.org/get",
+    "description": "HTTP request and response inspection service for debugging and testing",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "dev-tools",
+      "testing",
+      "http",
+      "debugging"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "dev-tools/jsonplaceholder",
+    "category": "dev-tools",
+    "name": "JSONPlaceholder",
+    "url": "https://jsonplaceholder.typicode.com/",
+    "api_base": "https://jsonplaceholder.typicode.com/posts/1",
+    "description": "Fake REST API with posts, comments, users, todos, albums, and photos for testing",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "dev-tools",
+      "testing",
+      "placeholder",
+      "json"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "dev-tools/random-user-generator",
+    "category": "dev-tools",
+    "name": "Random User Generator",
+    "url": "https://randomuser.me/documentation",
+    "api_base": "https://randomuser.me/api/",
+    "description": "Generate random user profiles with photos, names, addresses, and more",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "dev-tools",
+      "testing",
+      "users",
+      "placeholder"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "dev-tools/reqres",
+    "category": "dev-tools",
+    "name": "ReqRes",
+    "url": "https://reqres.in/",
+    "api_base": "https://reqres.in/api/users/1",
+    "description": "Hosted REST API for front-end testing with simulated CRUD responses",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "dev-tools",
+      "testing",
+      "placeholder"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "entertainment/icanhazdadjoke",
+    "category": "entertainment",
+    "name": "icanhazdadjoke",
+    "url": "https://icanhazdadjoke.com/api",
+    "api_base": "https://icanhazdadjoke.com/",
+    "description": "Random dad jokes in JSON, text, or HTML format",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "entertainment",
+      "jokes",
+      "humor"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "entertainment/official-joke-api",
+    "category": "entertainment",
+    "name": "Official Joke API",
+    "url": "https://github.com/15Dkatz/official_joke_api",
+    "api_base": "https://official-joke-api.appspot.com/random_joke",
+    "description": "Random programming, general, and knock-knock jokes",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "entertainment",
+      "jokes",
+      "humor"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "entertainment/open-trivia-database",
+    "category": "entertainment",
+    "name": "Open Trivia Database",
+    "url": "https://opentdb.com/api_config.php",
+    "api_base": "https://opentdb.com/api.php?amount=1",
+    "description": "User-contributed trivia questions across multiple categories and difficulty levels",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "entertainment",
+      "trivia",
+      "games",
+      "quiz"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "entertainment/pokeapi",
+    "category": "entertainment",
+    "name": "PokeAPI",
+    "url": "https://pokeapi.co/docs/v2",
+    "api_base": "https://pokeapi.co/api/v2/pokemon/1",
+    "description": "Comprehensive Pokemon data including species, abilities, moves, and types",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "entertainment",
+      "games",
+      "pokemon",
+      "anime"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "entertainment/rick-and-morty-api",
+    "category": "entertainment",
+    "name": "Rick and Morty API",
+    "url": "https://rickandmortyapi.com/documentation",
+    "api_base": "https://rickandmortyapi.com/api/character/1",
+    "description": "Characters, locations, and episodes from the Rick and Morty show",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "entertainment",
+      "tv",
+      "animation"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "entertainment/tvmaze",
+    "category": "entertainment",
+    "name": "TVmaze",
+    "url": "https://www.tvmaze.com/api",
+    "api_base": "https://api.tvmaze.com/shows/1",
+    "description": "TV show information including episodes, cast, schedules, and networks",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "entertainment",
+      "tv",
+      "shows",
+      "schedules"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "finance/coincap",
+    "category": "finance",
+    "name": "CoinCap",
+    "url": "https://docs.coincap.io/",
+    "api_base": "https://api.coincap.io/v2/assets",
+    "description": "Real-time cryptocurrency market data from thousands of exchanges",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "finance",
+      "crypto",
+      "prices",
+      "market-data"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "finance/coingecko",
+    "category": "finance",
+    "name": "CoinGecko",
+    "url": "https://www.coingecko.com/en/api/documentation",
+    "api_base": "https://api.coingecko.com/api/v3/ping",
+    "description": "Comprehensive crypto market data including prices, volume, and market cap",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "finance",
+      "crypto",
+      "blockchain",
+      "prices"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "finance/exchangerate-api",
+    "category": "finance",
+    "name": "ExchangeRate-API",
+    "url": "https://www.exchangerate-api.com/docs/free",
+    "api_base": "https://open.er-api.com/v6/latest/USD",
+    "description": "Free currency exchange rates for 161 currencies, updated daily",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "finance",
+      "currency",
+      "exchange-rates"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "finance/frankfurter",
+    "category": "finance",
+    "name": "Frankfurter",
+    "url": "https://frankfurter.dev/",
+    "api_base": "https://api.frankfurter.dev/v1/latest",
+    "description": "Real-time and historical exchange rates from the European Central Bank",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "finance",
+      "currency",
+      "exchange-rates"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "geocoding/bigdatacloud",
+    "category": "geocoding",
+    "name": "BigDataCloud",
+    "url": "https://www.bigdatacloud.com/free-api",
+    "api_base": "https://api.bigdatacloud.net/data/client-ip",
+    "description": "Free reverse geocoding, IP info, and proxy detection without API key",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "geocoding",
+      "ip-geolocation",
+      "reverse-geocoding"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "geocoding/freeipapi",
+    "category": "geocoding",
+    "name": "FreeIPAPI",
+    "url": "https://freeipapi.com/",
+    "api_base": "https://freeipapi.com/api/json/",
+    "description": "Free IP geolocation in JSON/XML with 60 req/min",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "geocoding",
+      "ip-geolocation",
+      "location"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "geocoding/ipapi-co",
+    "category": "geocoding",
+    "name": "ipapi.co",
+    "url": "https://ipapi.co/api/",
+    "api_base": "https://ipapi.co/json/",
+    "description": "IP address lookup and geolocation with 30K free requests/month",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "geocoding",
+      "ip-geolocation",
+      "location"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "geocoding/nominatim",
+    "category": "geocoding",
+    "name": "Nominatim",
+    "url": "https://nominatim.org/release-docs/latest/api/Overview/",
+    "api_base": "https://nominatim.openstreetmap.org/search?q=london&format=json&limit=1",
+    "description": "Free geocoding and reverse geocoding using OpenStreetMap data",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "geocoding",
+      "maps",
+      "addresses",
+      "openstreetmap"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "open-data/data-usa",
+    "category": "open-data",
+    "name": "Data USA",
+    "url": "https://datausa.io/about/api/",
+    "api_base": "https://datausa.io/api/data?drilldowns=Nation&measures=Population",
+    "description": "US public data on population, economy, education, and health",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "open-data",
+      "usa",
+      "demographics",
+      "government"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "open-data/open-library",
+    "category": "open-data",
+    "name": "Open Library",
+    "url": "https://openlibrary.org/developers/api",
+    "api_base": "https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&format=json",
+    "description": "Book data, covers, and reading lists from the Internet Archive",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "open-data",
+      "books",
+      "library",
+      "isbn"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "open-data/rest-countries",
+    "category": "open-data",
+    "name": "REST Countries",
+    "url": "https://restcountries.com/",
+    "api_base": "https://restcountries.com/v3.1/all?fields=name",
+    "description": "Country data including population, area, currencies, languages, and flags",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "open-data",
+      "countries",
+      "geography",
+      "demographics"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "open-data/usgs-earthquake-catalog",
+    "category": "open-data",
+    "name": "USGS Earthquake Catalog",
+    "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+    "api_base": "https://earthquake.usgs.gov/fdsnws/event/1/count?starttime=2025-01-01&minmagnitude=5",
+    "description": "Real-time and historical earthquake data worldwide from the US Geological Survey",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "open-data",
+      "earthquakes",
+      "geology",
+      "government"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "open-data/wikipedia",
+    "category": "open-data",
+    "name": "Wikipedia",
+    "url": "https://www.mediawiki.org/wiki/API:REST_API",
+    "api_base": "https://en.wikipedia.org/api/rest_v1/page/summary/API",
+    "description": "Access Wikipedia articles, summaries, and metadata via REST API",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "open-data",
+      "wikipedia",
+      "encyclopedia",
+      "knowledge"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "science/nasa-apod",
+    "category": "science",
+    "name": "NASA APOD",
+    "url": "https://api.nasa.gov/",
+    "api_base": "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY",
+    "description": "Astronomy Picture of the Day with explanation from professional astronomers",
+    "auth": "apiKey",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "science",
+      "space",
+      "astronomy",
+      "nasa",
+      "images"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "science/sunrise-sunset",
+    "category": "science",
+    "name": "Sunrise-Sunset",
+    "url": "https://sunrise-sunset.org/api",
+    "api_base": "https://api.sunrise-sunset.org/json?lat=36.72&lng=-4.42",
+    "description": "Sunrise, sunset, twilight, and day length times for any location",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "science",
+      "astronomy",
+      "sun",
+      "time"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "science/usgs-earthquake-feed",
+    "category": "science",
+    "name": "USGS Earthquake Feed",
+    "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
+    "api_base": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson",
+    "description": "Real-time earthquake GeoJSON feeds updated every minute",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "science",
+      "earthquakes",
+      "geology",
+      "geojson"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "weather/open-meteo",
+    "category": "weather",
+    "name": "Open-Meteo",
+    "url": "https://open-meteo.com/en/docs",
+    "api_base": "https://api.open-meteo.com/v1/forecast?latitude=35.68&longitude=139.69&current=temperature_2m",
+    "description": "Free weather forecasts, historical data, and climate analytics; no key required",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "weather",
+      "forecast",
+      "climate",
+      "historical"
+    ],
+    "added": "2026-03-31"
+  },
+  {
+    "id": "weather/wttr-in",
+    "category": "weather",
+    "name": "wttr.in",
+    "url": "https://github.com/chubin/wttr.in",
+    "api_base": "https://wttr.in/London?format=j1",
+    "description": "Console-oriented weather service supporting text, JSON, and PNG output",
+    "auth": "none",
+    "https": true,
+    "cors": true,
+    "tags": [
+      "weather",
+      "forecast",
+      "terminal",
+      "cli"
+    ],
+    "added": "2026-03-31"
+  }
+]

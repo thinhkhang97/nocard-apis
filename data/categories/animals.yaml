@@ -1,0 +1,65 @@
+- name: Dog CEO
+  url: https://dog.ceo/dog-api/documentation/
+  api_base: https://dog.ceo/api/breeds/image/random
+  description: Random dog images and breed data from 20,000+ images across 120+ breeds
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [animals, dogs, images]
+
+- name: Cat Facts
+  url: https://catfact.ninja/
+  api_base: https://catfact.ninja/fact
+  description: Random cat facts and breed listings
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [animals, cats, facts]
+
+- name: The Cat API
+  url: https://developers.thecatapi.com/
+  api_base: https://api.thecatapi.com/v1/images/search
+  description: 60K+ cat images with breed info; free API key via email signup
+  auth: apiKey
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [animals, cats, images]
+
+- name: Shibe.Online
+  url: https://shibe.online/
+  api_base: https://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true
+  description: Random Shiba Inu, cat, and bird images
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [animals, dogs, images]
+
+- name: RandomFox
+  url: https://randomfox.ca/
+  api_base: https://randomfox.ca/floof/
+  description: Random fox images
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [animals, foxes, images]
+
+- name: HTTP Cat
+  url: https://http.cat/
+  api_base: https://http.cat/200
+  description: Cat images for every HTTP status code
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [animals, cats, images, http]

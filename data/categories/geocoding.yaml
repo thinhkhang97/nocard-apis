@@ -1,0 +1,43 @@
+- name: Nominatim
+  url: https://nominatim.org/release-docs/latest/api/Overview/
+  api_base: https://nominatim.openstreetmap.org/search?q=london&format=json&limit=1
+  description: Free geocoding and reverse geocoding using OpenStreetMap data
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [geocoding, maps, addresses, openstreetmap]
+
+- name: ipapi.co
+  url: https://ipapi.co/api/
+  api_base: https://ipapi.co/json/
+  description: IP address lookup and geolocation with 30K free requests/month
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [geocoding, ip-geolocation, location]
+
+- name: FreeIPAPI
+  url: https://freeipapi.com/
+  api_base: https://freeipapi.com/api/json/
+  description: Free IP geolocation in JSON/XML with 60 req/min
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [geocoding, ip-geolocation, location]
+
+- name: BigDataCloud
+  url: https://www.bigdatacloud.com/free-api
+  api_base: https://api.bigdatacloud.net/data/client-ip
+  description: Free reverse geocoding, IP info, and proxy detection without API key
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [geocoding, ip-geolocation, reverse-geocoding]

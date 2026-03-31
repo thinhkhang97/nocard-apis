@@ -1,0 +1,54 @@
+- name: JSONPlaceholder
+  url: https://jsonplaceholder.typicode.com/
+  api_base: https://jsonplaceholder.typicode.com/posts/1
+  description: Fake REST API with posts, comments, users, todos, albums, and photos for testing
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [dev-tools, testing, placeholder, json]
+
+- name: DummyJSON
+  url: https://dummyjson.com/docs
+  api_base: https://dummyjson.com/products/1
+  description: Rich fake REST API with 150+ endpoints for products, users, carts, recipes, and more
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [dev-tools, testing, placeholder, json]
+
+- name: Random User Generator
+  url: https://randomuser.me/documentation
+  api_base: https://randomuser.me/api/
+  description: Generate random user profiles with photos, names, addresses, and more
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [dev-tools, testing, users, placeholder]
+
+- name: ReqRes
+  url: https://reqres.in/
+  api_base: https://reqres.in/api/users/1
+  description: Hosted REST API for front-end testing with simulated CRUD responses
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [dev-tools, testing, placeholder]
+
+- name: httpbin
+  url: https://httpbin.org/
+  api_base: https://httpbin.org/get
+  description: HTTP request and response inspection service for debugging and testing
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [dev-tools, testing, http, debugging]

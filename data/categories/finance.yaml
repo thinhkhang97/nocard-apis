@@ -1,0 +1,43 @@
+- name: Frankfurter
+  url: https://frankfurter.dev/
+  api_base: https://api.frankfurter.dev/v1/latest
+  description: Real-time and historical exchange rates from the European Central Bank
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [finance, currency, exchange-rates]
+
+- name: ExchangeRate-API
+  url: https://www.exchangerate-api.com/docs/free
+  api_base: https://open.er-api.com/v6/latest/USD
+  description: Free currency exchange rates for 161 currencies, updated daily
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [finance, currency, exchange-rates]
+
+- name: CoinGecko
+  url: https://www.coingecko.com/en/api/documentation
+  api_base: https://api.coingecko.com/api/v3/ping
+  description: Comprehensive crypto market data including prices, volume, and market cap
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [finance, crypto, blockchain, prices]
+
+- name: CoinCap
+  url: https://docs.coincap.io/
+  api_base: https://api.coincap.io/v2/assets
+  description: Real-time cryptocurrency market data from thousands of exchanges
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [finance, crypto, prices, market-data]

@@ -1,0 +1,65 @@
+- name: icanhazdadjoke
+  url: https://icanhazdadjoke.com/api
+  api_base: https://icanhazdadjoke.com/
+  description: Random dad jokes in JSON, text, or HTML format
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [entertainment, jokes, humor]
+
+- name: Official Joke API
+  url: https://github.com/15Dkatz/official_joke_api
+  api_base: https://official-joke-api.appspot.com/random_joke
+  description: Random programming, general, and knock-knock jokes
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [entertainment, jokes, humor]
+
+- name: Open Trivia Database
+  url: https://opentdb.com/api_config.php
+  api_base: https://opentdb.com/api.php?amount=1
+  description: User-contributed trivia questions across multiple categories and difficulty levels
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [entertainment, trivia, games, quiz]
+
+- name: PokeAPI
+  url: https://pokeapi.co/docs/v2
+  api_base: https://pokeapi.co/api/v2/pokemon/1
+  description: Comprehensive Pokemon data including species, abilities, moves, and types
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [entertainment, games, pokemon, anime]
+
+- name: Rick and Morty API
+  url: https://rickandmortyapi.com/documentation
+  api_base: https://rickandmortyapi.com/api/character/1
+  description: Characters, locations, and episodes from the Rick and Morty show
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [entertainment, tv, animation]
+
+- name: TVmaze
+  url: https://www.tvmaze.com/api
+  api_base: https://api.tvmaze.com/shows/1
+  description: TV show information including episodes, cast, schedules, and networks
+  auth: none
+  https: true
+  cors: true
+  credit_card_required: false
+  added: "2026-03-31"
+  tags: [entertainment, tv, shows, schedules]

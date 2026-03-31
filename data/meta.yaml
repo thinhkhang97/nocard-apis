@@ -1,0 +1,32 @@
+categories:
+  - name: Animals
+    slug: animals
+    description: Animal images, facts, and data
+
+  - name: Dev Tools
+    slug: dev-tools
+    description: Developer utilities, testing, and productivity APIs
+
+  - name: Entertainment
+    slug: entertainment
+    description: Movies, music, games, and fun APIs
+
+  - name: Finance
+    slug: finance
+    description: Currency, crypto, and market data
+
+  - name: Geocoding
+    slug: geocoding
+    description: Maps, geolocation, and address data
+
+  - name: Open Data
+    slug: open-data
+    description: Government, public datasets, and open information
+
+  - name: Science
+    slug: science
+    description: Space, math, and scientific data
+
+  - name: Weather
+    slug: weather
+    description: Weather forecasts, historical data, and climate

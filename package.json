@@ -1,0 +1,22 @@
+{
+  "name": "nocard-apis",
+  "version": "1.0.0",
+  "description": "Curated catalog of free APIs that don't require a credit card, with automated health monitoring",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-catalog.js",
+    "validate": "node scripts/validate-schema.js",
+    "health-check": "node scripts/health-check.js"
+  },
+  "keywords": [
+    "free-apis",
+    "no-credit-card",
+    "api-catalog",
+    "health-check",
+    "monitoring"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

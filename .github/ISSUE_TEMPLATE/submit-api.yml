@@ -1,0 +1,76 @@
+name: Submit API
+description: Suggest a free API (no credit card required)
+title: "[Submit] "
+labels: ["new-api"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: API Name
+      placeholder: e.g. Open-Meteo
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Documentation URL
+      placeholder: https://example.com/docs
+    validations:
+      required: true
+
+  - type: input
+    id: api_base
+    attributes:
+      label: Health check endpoint
+      description: A GET endpoint we can ping to check if the API is alive
+      placeholder: https://api.example.com/v1/status
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One-line description of what the API does
+      placeholder: Free weather forecast API with no signup required
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Animals
+        - Dev Tools
+        - Entertainment
+        - Finance
+        - Geocoding
+        - Open Data
+        - Science
+        - Weather
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: auth
+    attributes:
+      label: Authentication
+      options:
+        - none (no auth needed)
+        - apiKey (free key, no credit card)
+        - oauth
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I confirm this API does NOT require a credit card to use
+          required: true
+        - label: I have tested this API and it is currently working
+          required: true
