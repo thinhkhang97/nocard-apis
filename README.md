@@ -37,35 +37,30 @@ Features:
 - Response time tracking
 - Sort by any column
 
-## Categories
+## Browse by Use Case
 
-| Category | Description |
-|----------|-------------|
-| Animals | Animal images, facts, and breed data |
-| Dev Tools | Placeholder data, testing, and utilities |
-| Entertainment | Movies, jokes, games, and trivia |
-| Finance | Currency exchange and crypto prices |
-| Geocoding | Maps, IP geolocation, and addresses |
-| Open Data | Wikipedia, countries, government data |
-| Science | Space, astronomy, and earthquake data |
-| Weather | Weather forecasts and climate data |
+APIs are tagged by what you can build with them, not by rigid categories. One API can serve many use cases.
+
+Filter by tags like `travel`, `maps`, `weather`, `search`, `images`, `food`, `shopping`, and more on the [dashboard](https://thinhkhang97.github.io/nocard-apis/).
 
 ## Data Format
 
-API entries are stored as YAML in `data/categories/`. Each entry:
+All APIs live in a single file `data/apis.yaml`:
 
 ```yaml
-- name: Open-Meteo
-  url: https://open-meteo.com/en/docs
-  api_base: https://api.open-meteo.com/v1/forecast?latitude=35.68&longitude=139.69&current=temperature_2m
-  description: Free weather forecasts and climate analytics; no key required
-  auth: none          # none | apiKey | oauth
+- name: SerpAPI
+  url: https://serpapi.com/
+  api_base: https://serpapi.com/status
+  description: Access Google Search, Images, Maps, Places via unified API
+  auth: apiKey
   https: true
-  cors: true
+  cors: false
   credit_card_required: false
   added: "2026-03-31"
-  tags: [weather, forecast]
+  tags: [search, maps, images, places, travel, food, shopping]
 ```
+
+Tags describe use cases — an API can have as many tags as applicable.
 
 ## Programmatic Access
 

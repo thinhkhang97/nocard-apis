@@ -37,20 +37,12 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: category
+  - type: input
+    id: tags
     attributes:
-      label: Category
-      options:
-        - Animals
-        - Dev Tools
-        - Entertainment
-        - Finance
-        - Geocoding
-        - Open Data
-        - Science
-        - Weather
-        - Other
+      label: Use-case tags
+      description: Comma-separated tags describing what this API is useful for
+      placeholder: e.g. travel, maps, weather, images
     validations:
       required: true
 

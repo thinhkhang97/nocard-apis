@@ -1,15 +1,15 @@
-import { readFileSync, readdirSync } from 'node:fs';
-import { join, basename } from 'node:path';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import yaml from 'js-yaml';
 
-const CATEGORIES_DIR = new URL('../data/categories', import.meta.url).pathname;
+const SOURCE_FILE = new URL('../data/apis.yaml', import.meta.url).pathname;
 
 const REQUIRED_FIELDS = ['name', 'url', 'api_base', 'description', 'auth', 'https', 'cors', 'credit_card_required', 'added', 'tags'];
 const VALID_AUTH = ['none', 'apiKey', 'oauth'];
 
-function validateEntry(entry, file, index) {
+function validateEntry(entry, index) {
   const errors = [];
-  const prefix = `${file}[${index}] (${entry.name || 'unnamed'})`;
+  const prefix = `[${index}] (${entry.name || 'unnamed'})`;
 
   for (const field of REQUIRED_FIELDS) {
     if (entry[field] === undefined || entry[field] === null) {
@@ -41,43 +41,42 @@ function validateEntry(entry, file, index) {
     errors.push(`${prefix}: tags must be an array`);
   }
 
+  if (entry.tags && Array.isArray(entry.tags) && entry.tags.length === 0) {
+    errors.push(`${prefix}: tags must have at least one tag`);
+  }
+
   return errors;
 }
 
 function validate() {
-  const files = readdirSync(CATEGORIES_DIR).filter(f => f.endsWith('.yaml'));
+  const content = readFileSync(SOURCE_FILE, 'utf-8');
+  let entries;
+
+  try {
+    entries = yaml.load(content);
+  } catch (e) {
+    console.error(`Invalid YAML: ${e.message}`);
+    process.exit(1);
+  }
+
+  if (!entries || !Array.isArray(entries)) {
+    console.log('Validation passed: 0 APIs');
+    return;
+  }
+
   const allErrors = [];
-  const allIds = new Set();
-  let totalApis = 0;
+  const allNames = new Set();
 
-  for (const file of files) {
-    const content = readFileSync(join(CATEGORIES_DIR, file), 'utf-8');
-    let entries;
+  for (let i = 0; i < entries.length; i++) {
+    const entry = entries[i];
+    const name = entry.name?.toLowerCase();
 
-    try {
-      entries = yaml.load(content);
-    } catch (e) {
-      allErrors.push(`${file}: invalid YAML - ${e.message}`);
-      continue;
+    if (allNames.has(name)) {
+      allErrors.push(`[${i}]: duplicate API "${entry.name}"`);
     }
+    allNames.add(name);
 
-    if (!Array.isArray(entries)) {
-      allErrors.push(`${file}: must be a YAML array`);
-      continue;
-    }
-
-    for (let i = 0; i < entries.length; i++) {
-      const entry = entries[i];
-      totalApis++;
-
-      const id = `${basename(file, '.yaml')}/${entry.name?.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
-      if (allIds.has(id)) {
-        allErrors.push(`${file}[${i}]: duplicate API "${entry.name}"`);
-      }
-      allIds.add(id);
-
-      allErrors.push(...validateEntry(entry, file, i));
-    }
+    allErrors.push(...validateEntry(entry, i));
   }
 
   if (allErrors.length > 0) {
@@ -88,7 +87,9 @@ function validate() {
     process.exit(1);
   }
 
-  console.log(`Validation passed: ${totalApis} APIs in ${files.length} categories`);
+  const allTags = [...new Set(entries.flatMap(e => e.tags || []))].sort();
+  console.log(`Validation passed: ${entries.length} APIs, ${allTags.length} unique tags`);
+  console.log(`Tags: ${allTags.join(', ')}`);
 }
 
 validate();

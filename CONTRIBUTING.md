@@ -13,8 +13,7 @@ Thanks for helping keep this catalog accurate and growing!
 ### Option 2: Pull Request
 
 1. Fork the repo and clone it
-2. Add your API to the appropriate YAML file in `data/categories/`
-3. Follow this format:
+2. Add your API to `data/apis.yaml`:
 
 ```yaml
 - name: API Name
@@ -26,17 +25,23 @@ Thanks for helping keep this catalog accurate and growing!
   cors: true
   credit_card_required: false
   added: "YYYY-MM-DD"
-  tags: [category, relevant, tags]
+  tags: [use-case, tags, here]
 ```
 
-4. Run validation:
+3. Run validation:
 
 ```bash
 npm install
 npm run validate
 ```
 
-5. Submit a PR
+4. Submit a PR
+
+### Tags
+
+Tags describe **use cases** — what you can build with the API. An API can have many tags. Use existing tags when possible, or introduce new ones if needed.
+
+Examples: `travel`, `maps`, `weather`, `search`, `images`, `food`, `shopping`, `news`, `finance`
 
 ### Requirements
 
@@ -45,6 +50,7 @@ Every API must:
 - **Not require a credit card** for signup or usage
 - Have a working `api_base` endpoint that returns a response
 - Support **HTTPS** (strongly preferred)
+- Be **personally tested** by the submitter
 
 ## Report a Broken API
 
@@ -54,13 +60,6 @@ If an API is down, now requires a credit card, or has been discontinued:
 2. Fill out the form
 
 Or open a PR removing/updating the entry.
-
-## Add a New Category
-
-1. Create a new YAML file in `data/categories/` (e.g., `music.yaml`)
-2. Add the category to `data/meta.yaml`
-3. Add at least 3 APIs to the new category
-4. Submit a PR
 
 ## Development
 
@@ -78,7 +77,7 @@ npm run build
 npm run health-check
 
 # View dashboard
-open docs/index.html
+npm run dev
 ```
 
 ## Code of Conduct

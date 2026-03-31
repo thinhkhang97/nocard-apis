@@ -3,6 +3,7 @@ const STATE = {
   results: {},
   sortKey: 'name',
   sortDir: 'asc',
+  activeTags: new Set(),
 };
 
 async function loadData() {
@@ -20,14 +21,36 @@ function getStatus(apiId) {
   return STATE.results[apiId] || { status: 'unknown' };
 }
 
-function populateCategories() {
-  const categories = [...new Set(STATE.apis.map(a => a.category))].sort();
-  const select = document.getElementById('category-filter');
-  for (const cat of categories) {
-    const opt = document.createElement('option');
-    opt.value = cat;
-    opt.textContent = cat.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-    select.appendChild(opt);
+function getAllTags() {
+  const tags = new Set();
+  for (const api of STATE.apis) {
+    for (const tag of api.tags) {
+      tags.add(tag);
+    }
+  }
+  return [...tags].sort();
+}
+
+function populateTags() {
+  const tags = getAllTags();
+  const container = document.getElementById('tag-filters');
+  container.innerHTML = '';
+
+  for (const tag of tags) {
+    const btn = document.createElement('button');
+    btn.className = 'tag-chip';
+    btn.textContent = tag;
+    btn.addEventListener('click', () => {
+      if (STATE.activeTags.has(tag)) {
+        STATE.activeTags.delete(tag);
+        btn.classList.remove('active');
+      } else {
+        STATE.activeTags.add(tag);
+        btn.classList.add('active');
+      }
+      renderTable();
+    });
+    container.appendChild(btn);
   }
 }
 
@@ -62,22 +85,21 @@ function formatResponseTime(ms) {
   return (ms / 1000).toFixed(1) + 's';
 }
 
-function formatCategory(cat) {
-  return cat.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-}
-
 function getFilteredApis() {
   const search = document.getElementById('search').value.toLowerCase().trim();
-  const category = document.getElementById('category-filter').value;
   const status = document.getElementById('status-filter').value;
   const auth = document.getElementById('auth-filter').value;
 
   return STATE.apis.filter(api => {
-    if (category && api.category !== category) return false;
     if (auth && api.auth !== auth) return false;
 
     const apiStatus = getStatus(api.id);
     if (status && apiStatus.status !== status) return false;
+
+    if (STATE.activeTags.size > 0) {
+      const hasMatchingTag = [...STATE.activeTags].some(tag => api.tags.includes(tag));
+      if (!hasMatchingTag) return false;
+    }
 
     if (search) {
       const haystack = (api.name + ' ' + api.description + ' ' + api.tags.join(' ')).toLowerCase();
@@ -99,10 +121,6 @@ function sortApis(apis) {
       case 'name':
         va = a.name.toLowerCase();
         vb = b.name.toLowerCase();
-        break;
-      case 'category':
-        va = a.category;
-        vb = b.category;
         break;
       case 'auth':
         va = a.auth;
@@ -128,6 +146,10 @@ function sortApis(apis) {
     if (va > vb) return 1 * dir;
     return 0;
   });
+}
+
+function renderTags(tags) {
+  return tags.map(t => `<span class="tag-badge">${escapeHtml(t)}</span>`).join(' ');
 }
 
 function renderTable() {
@@ -158,7 +180,7 @@ function renderTable() {
       <td class="td-desc">
         <span class="api-desc">${escapeHtml(api.description)}</span>
       </td>
-      <td><span class="category-badge">${escapeHtml(formatCategory(api.category))}</span></td>
+      <td class="td-tags">${renderTags(api.tags)}</td>
       <td><span class="auth-badge">${api.auth === 'none' ? 'None' : api.auth}</span></td>
       <td><span class="response-time ${rtClass}">${formatResponseTime(s.response_time_ms)}</span></td>
     </tr>`;
@@ -196,7 +218,6 @@ function setupSort() {
 
 function setupFilters() {
   document.getElementById('search').addEventListener('input', renderTable);
-  document.getElementById('category-filter').addEventListener('change', renderTable);
   document.getElementById('status-filter').addEventListener('change', renderTable);
   document.getElementById('auth-filter').addEventListener('change', renderTable);
 }
@@ -204,7 +225,7 @@ function setupFilters() {
 async function init() {
   try {
     const resultsData = await loadData();
-    populateCategories();
+    populateTags();
     updateSummary(resultsData);
     setupSort();
     setupFilters();

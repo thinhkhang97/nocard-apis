@@ -46,9 +46,6 @@
         placeholder="Search APIs..."
         aria-label="Search APIs"
       >
-      <select id="category-filter" aria-label="Filter by category">
-        <option value="">All Categories</option>
-      </select>
       <select id="status-filter" aria-label="Filter by status">
         <option value="">All Statuses</option>
         <option value="up">Up</option>
@@ -64,6 +61,11 @@
       </select>
     </section>
 
+    <section class="tag-section" aria-label="Filter by use case">
+      <p class="tag-section-label">Filter by use case:</p>
+      <div id="tag-filters" class="tag-filters"></div>
+    </section>
+
     <p id="last-check" class="last-check"></p>
 
     <section id="api-table-wrapper" aria-label="API catalog">
@@ -73,7 +75,7 @@
             <th class="sortable" data-sort="status">Status</th>
             <th class="sortable" data-sort="name">Name</th>
             <th class="th-desc">Description</th>
-            <th class="sortable" data-sort="category">Category</th>
+            <th>Tags</th>
             <th class="sortable" data-sort="auth">Auth</th>
             <th class="sortable" data-sort="response_time">Response</th>
           </tr>
