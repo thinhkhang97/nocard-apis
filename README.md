@@ -3,8 +3,21 @@
 > Curated catalog of free APIs that don't require a credit card, with automated health monitoring.
 
 [![Health Check](https://github.com/thinhkhang97/nocard-apis/actions/workflows/health-check.yml/badge.svg)](https://github.com/thinhkhang97/nocard-apis/actions/workflows/health-check.yml)
-[![APIs](https://img.shields.io/badge/APIs-35-blue)](https://thinhkhang97.github.io/nocard-apis/)
+[![APIs](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fthinhkhang97%2Fnocard-apis%2Fmain%2Fdata%2Fapis.json&query=%24.length&label=APIs&color=blue)](https://thinhkhang97.github.io/nocard-apis/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+## Our Philosophy
+
+There are plenty of "free API" lists out there. Most of them are copy-pasted from other lists, full of dead links, APIs that quietly started requiring a credit card, or services that disappeared years ago. Nobody checked. Nobody verified. The list just keeps getting longer.
+
+**This project is different.** We value honesty over size, quality over quantity.
+
+- **Every API is personally verified.** No copy-pasting from other lists. If it's listed here, someone has signed up, tested the endpoint, and confirmed: no credit card required.
+- **We'd rather have 10 verified APIs than 1,000 unverified ones.** A smaller catalog you can trust is more valuable than a massive list you can't.
+- **If an API breaks or changes its policy, we remove it.** Automated health checks run every 6 hours. We don't keep dead links around for the numbers.
+- **We say what we know, and nothing more.** If we haven't tested it, it's not in the catalog.
+
+The catalog starts empty and grows one verified API at a time. That's intentional.
 
 ## Why?
 
@@ -26,16 +39,16 @@ Features:
 
 ## Categories
 
-| Category | APIs | Description |
-|----------|------|-------------|
-| Animals | 6 | Animal images, facts, and breed data |
-| Dev Tools | 5 | Placeholder data, testing, and utilities |
-| Entertainment | 6 | Movies, jokes, games, and trivia |
-| Finance | 4 | Currency exchange and crypto prices |
-| Geocoding | 4 | Maps, IP geolocation, and addresses |
-| Open Data | 5 | Wikipedia, countries, government data |
-| Science | 3 | Space, astronomy, and earthquake data |
-| Weather | 2 | Weather forecasts and climate data |
+| Category | Description |
+|----------|-------------|
+| Animals | Animal images, facts, and breed data |
+| Dev Tools | Placeholder data, testing, and utilities |
+| Entertainment | Movies, jokes, games, and trivia |
+| Finance | Currency exchange and crypto prices |
+| Geocoding | Maps, IP geolocation, and addresses |
+| Open Data | Wikipedia, countries, government data |
+| Science | Space, astronomy, and earthquake data |
+| Weather | Weather forecasts and climate data |
 
 ## Data Format
 
@@ -84,13 +97,13 @@ npm run build
 # Run health checks
 npm run health-check
 
-# View dashboard
-open docs/index.html
+# View dashboard (requires a local server, file:// won't work)
+npm run dev
 ```
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to:
+We welcome contributions, but every API must be verified before it's accepted. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to:
 - Submit a new API
 - Report a broken API
 - Run the project locally
